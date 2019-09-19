@@ -79,7 +79,7 @@ def process(sets, format=''):
         if set in valid_sets:
             object = class_map[set]()
 
-            if format != '':
+            if format != '' and format is not None:
                 make_palette = getattr(object, 'make_' + format, None)
                 make_palette()
             else:
